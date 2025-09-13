@@ -144,7 +144,7 @@ layers:
   - KP SLASH
   - KP MULTI
   - PAUSE BREAK
-  - '&studio_unlock'
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:bluetooth-off$$
   - BT CLR ALL
   - {t: '$$mdi:transfer$$', type: trans}
