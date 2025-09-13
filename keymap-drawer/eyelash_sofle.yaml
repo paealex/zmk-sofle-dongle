@@ -142,7 +142,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - KP NLCK
   - KP SLASH
-  - KP MULTI
+  - KP MULTIPLY
   - PAUSE BREAK
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:bluetooth-off$$
