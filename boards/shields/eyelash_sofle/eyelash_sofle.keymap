@@ -72,20 +72,20 @@
             >;
 
             sensor-bindings = <&scroll_encoder>;
-	    display-name = "LAYER1";
+            display-name = "LAYER1";
         };
 
         layer_2 {
             bindings = <
 &kp TILDE        &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &trans      &trans     &kp KP_NLCK   &kp KP_SLASH   &kp KP_MULTI   &kp PAUSE_BREAK
-&studio_unlock   &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &trans      &trans     &kp KP_N7     &kp KP_N8      &kp KP_N9      &kp KP_MINUS
+&trans           &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &trans      &trans     &kp KP_N7     &kp KP_N8      &kp KP_N9      &kp KP_MINUS
 &trans           &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &trans      &trans     &kp KP_N4     &kp KP_N5      &kp KP_N6      &kp KP_PLUS
 &trans           &sys_reset    &trans          &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &trans      &trans     &kp KP_N1     &kp KP_N2      &kp KP_N3      &kp KP_ENTER
 &trans           &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &kp DELETE  &kp ENTER  &trans        &kp KP_N0      &kp KP_DOT
             >;
 
             sensor-bindings = <&scroll_encoder>;
-	    display-name = "LAYER2";
+            display-name = "LAYER2";
         };
     };
 };
