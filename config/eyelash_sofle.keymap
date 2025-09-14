@@ -48,14 +48,29 @@
 
         tap-ms = <30>;
     };
-
+	
+    behaviors {
+        td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
+        };
+		td1: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp MINUS>, <&kp EQUAL>;
+        };
+    };
+	
     keymap {
         compatible = "zmk,keymap";
 
         layer0 {
             bindings = <
-&kp ESC     &kp N1     &kp N2        &kp N3        &kp N4  &kp N5       &kp UP_ARROW     &kp N6         &kp N7     &kp N8     &kp N9           &kp N0      &kp MINUS
-&kp TAB     &kp Q      &kp W         &kp E         &kp R   &kp T        &kp DOWN_ARROW   &kp Y          &kp U      &kp I      &kp O            &kp P       &kp LEFT_BRACKET
+&kp ESC     &kp N1     &kp N2        &kp N3        &kp N4  &kp N5       &kp UP_ARROW     &kp N6         &kp N7     &kp N8     &kp N9           &kp N0      &kp td1
+&kp TAB     &kp Q      &kp W         &kp E         &kp R   &kp T        &kp DOWN_ARROW   &kp Y          &kp U      &kp I      &kp O            &kp P       &kp td0
 &kp LCTRL   &kp A      &kp S         &kp D         &kp F   &kp G        &kp LEFT_ARROW   &kp H          &kp J      &kp K      &kp L            &kp SEMI    &kp APOS
 &kp LSHFT   &kp Z      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N          &kp M      &kp COMMA  &kp DOT          &kp FSLH    &kp BSLH
 &kp C_MUTE  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &mo 1   &kp SPACE    &kp ENTER        &kp BACKSPACE  &kp ENTER  &mo 2      &kp LEFT_ARROW   &kp RIGHT_ARROW
@@ -67,11 +82,11 @@
 
         layer_1 {
             bindings = <
-&kp GRAVE   &kp F1           &kp F2          &kp F3           &kp F4           &kp F5             &mmv MOVE_UP     &kp F6           &kp F7           &kp F8      &kp F9          &kp F10        &kp EQUAL
-&kp TAB     &trans           &mkp LCLK       &mkp MCLK        &mkp RCLK        &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP        &kp END          &kp UP      &kp HOME        &trans         &kp RIGHT_BRACKET
-&kp LCTRL   &trans           &trans          &trans           &trans           &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT         &kp DOWN    &kp RIGHT       &trans         &trans
-&kp LSHFT   &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &trans      &trans          &kp F11        &kp F12
-&kp C_MUTE  &kp LCTRL        &kp LEFT_GUI    &kp LEFT_ALT     &trans           &kp SPACE          &mkp LCLK        &kp DELETE       &kp ENTER        &trans      &kp DOWN_ARROW  &kp UP_ARROW
+&kp GRAVE   &kp F1           &kp F2          &kp F3           &kp F4           &kp F5             &mmv MOVE_UP     &kp F6           &kp F7           &kp F8          &kp F9          &kp F10        &kp EQUAL
+&kp TAB     &trans           &mkp LCLK       &mkp MCLK        &mkp RCLK        &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP        &kp END          &kp UP          &kp HOME        &trans         &kp RIGHT_BRACKET
+&kp LCTRL   &trans           &trans          &trans           &trans           &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT         &kp DOWN        &kp RIGHT       &trans         &trans
+&kp LSHFT   &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_HUI &rgb_ug RGB_HUD &kp F11        &kp F12
+&kp C_MUTE  &kp LCTRL        &kp LEFT_GUI    &kp LEFT_ALT     &trans           &kp SPACE          &mkp LCLK        &kp DELETE       &kp ENTER        &trans          &kp DOWN_ARROW  &kp UP_ARROW
             >;
 
             sensor-bindings = <&scroll_encoder>;
