@@ -63,8 +63,8 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - TWO
-  - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-right-bold$$
+  - $$mdi:keyboard-space$$
+  - $$mdi:backspace-reverse-outline$$
   ONE:
   - {t: '`', s: '~'}
   - F1
